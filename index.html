@@ -15,10 +15,16 @@
 
     <h2>How much time do you have?</h2>
 
-    <button>10 minutes</button>
-    <button>30 minutes</button>
-    <button>1 hour</button>
-    <button>2+ hours</button>
-
+    <button onclick="chooseTime('10 minutes')">10 minutes</button>
+<button onclick="chooseTime('30 minutes')">30 minutes</button>
+<button onclick="chooseTime('1 hour')">1 hour</button>
+    <p id="message"></p>
+ <button onclick="chooseTime('2+ hours')">2+ hours</button>   
+<script>
+function chooseTime(time) {
+  document.getElementById('message').textContent =
+    'Great! You have ' + time + ' for yourself ✨';
+}
+</script>
 </body>
 </html>
