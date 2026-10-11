@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhimDrop</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+</head>
 
 <body>
 
@@ -16,15 +16,21 @@
     <h2>How much time do you have?</h2>
 
     <button onclick="chooseTime('10 minutes')">10 minutes</button>
-<button onclick="chooseTime('30 minutes')">30 minutes</button>
-<button onclick="chooseTime('1 hour')">1 hour</button>
+
+    <button onclick="chooseTime('30 minutes')">30 minutes</button>
+
+    <button onclick="chooseTime('1 hour')">1 hour</button>
+
+    <button onclick="chooseTime('2+ hours')">2+ hours</button>
+
     <p id="message"></p>
- <button onclick="chooseTime('2+ hours')">2+ hours</button>   
-<script>
-function chooseTime(time) {
-  document.getElementById('message').textContent =
-    'Great! You have ' + time + ' for yourself ✨';
-}
-</script>
+
+    <script>
+        function chooseTime(time) {
+            document.getElementById('message').textContent =
+                'Great! You have ' + time + ' for yourself ✨';
+        }
+    </script>
+
 </body>
 </html>
