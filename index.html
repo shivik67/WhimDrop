@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>WhimDrop</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,76 +17,98 @@
 
     <h2>How much time do you have?</h2>
 
-    <button onclick="chooseTime('10 minutes')">10 minutes</button>
+    <button onclick="chooseTime('10 minutes')">
+        10 minutes
+    </button>
 
-    <button onclick="chooseTime('30 minutes')">30 minutes</button>
+    <button onclick="chooseTime('30 minutes')">
+        30 minutes
+    </button>
 
-    <button onclick="chooseTime('1 hour')">1 hour</button>
+    <button onclick="chooseTime('1 hour')">
+        1 hour
+    </button>
 
-    <button onclick="chooseTime('2+ hours')">2+ hours</button>
+    <button onclick="chooseTime('2+ hours')">
+        2+ hours
+    </button>
 
     <p id="message"></p>
 
-<div id="activity"></div>
+    <div id="activity"></div>
 
     <script>
         function chooseTime(time) {
-    document.getElementById("message").textContent =
-        "Great! You have " + time + " for yourself ✨";
 
-    let activities = [];
+            document.getElementById("message").textContent =
+                "Great! You have " + time + " for yourself ✨";
 
-    if (time === "10 minutes") {
-        activities = [
-            "Listen to your favourite song 🎧",
-            "Write down three things you love 💗",
-            "Watch the clouds ☁️",
-            "Do a tiny doodle 🎨",
-            "Read a few pages of a book 📖",
-            "Water your plants 🪴",
-            "Learn a new word 🌍",
-            "Take a little screen break 🌷"
-        ];
-    } else if (time === "30 minutes") {
-        activities = [
-            "Draw something creative 🎨",
-            "Try a new hairstyle 💫",
-            "Write in your journal 📔",
-            "Learn a dance routine 💃",
-            "Read a short story 📚",
-            "Make a new playlist 🎶",
-            "Try a simple recipe 🍓",
-            "Explore a new topic 🔎"
-        ];
-    } else if (time === "1 hour") {
-        activities = [
-            "Start a creative project 🎨",
-            "Learn some beginner coding 💻",
-            "Make a mood board ✂️",
-            "Read a book 📚",
-            "Try a new recipe 🍜",
-            "Explore a topic you love 🌎",
-            "Write a short story ✍️",
-            "Learn something about AI 🤖"
-        ];
-    } else {
-        activities = [
-            "Build a mini website 💻",
-            "Create a scrapbook 📔",
-            "Explore a new hobby 🌷",
-            "Learn a new skill 🧠",
-            "Make a short video 🎬",
-            "Design your dream room 🏡",
-            "Write a blog post ✍️",
-            "Create your own art collection 🎨"
-        ];
-    }
+            let activities = [];
 
-    let randomIndex = Math.floor(Math.random() * activities.length);
+            if (time === "10 minutes") {
 
-    document.getElementById("activity").textContent =
-        "Your little adventure: " + activities[randomIndex];
+                activities = [
+                    "Listen to your favourite song 🎧",
+                    "Write three things you love 💗",
+                    "Watch the clouds ☁️",
+                    "Draw a little doodle 🎨",
+                    "Read a few pages of a book 📚",
+                    "Water your plants 🪴",
+                    "Learn a new word 🌍",
+                    "Take a little screen break 🌷"
+                ];
+
+            } else if (time === "30 minutes") {
+
+                activities = [
+                    "Draw something creative 🎨",
+                    "Write in your journal 📔",
+                    "Learn a dance routine 💃",
+                    "Read a short story 📖",
+                    "Make a new playlist 🎶",
+                    "Try a simple recipe 🍓",
+                    "Explore a new topic 🔎",
+                    "Write a poem ✍️"
+                ];
+
+            } else if (time === "1 hour") {
+
+                activities = [
+                    "Learn beginner coding 💻",
+                    "Read a book 📚",
+                    "Try a new recipe 🍜",
+                    "Write a blog post ✍️",
+                    "Explore artificial intelligence 🤖",
+                    "Create a mood board 🎨",
+                    "Learn something new 🌍",
+                    "Start a creative project ✨"
+                ];
+
+            } else {
+
+                activities = [
+                    "Build a mini website 💻",
+                    "Create a scrapbook 📔",
+                    "Explore a new hobby 🌷",
+                    "Learn a new skill 🧠",
+                    "Make a short video 🎬",
+                    "Design your dream room 🏡",
+                    "Write a blog post ✍️",
+                    "Create your own artwork 🎨"
+                ];
+
+            }
+
+            let randomIndex = Math.floor(
+                Math.random() * activities.length
+            );
+
+            document.getElementById("activity").textContent =
+                "🌸 Your little adventure: " +
+                activities[randomIndex];
+
         }
-</script>
+    </script>
+
 </body>
 </html>
